@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Features;
 use App\Models\Product;
 use App\Models\Store;
 use App\Models\User;
@@ -23,6 +24,14 @@ class DatabaseSeeder extends Seeder
             'phone' => '0999999999',
             'password' => '00000000',
             'role' => 'admin',
+        ]);
+
+        User::create([
+            'first_name' => 'Amer',
+            'last_name' => 'Driver',
+            'phone' => '0888888888',
+            'password' => '00000000',
+            'role' => 'driver',
         ]);
 
 
@@ -61,6 +70,63 @@ class DatabaseSeeder extends Seeder
             'price' => 100,
             'image' => '/public/product_image/product1.jpgp',
             'store_id' => 1,
+        ]);
+
+        Product::create([
+            'name' => 'tyr ',
+            'description' => 'جميع المقاسات',
+            'amount' => 10,
+            'price' => 100,
+            'image' => '/public/product_image/product1.jpgp',
+            'store_id' => 1,
+        ]);
+
+
+        Product::create([
+            'name' => 'cs ',
+            'description' => 'جميع المقاسات',
+            'amount' => 10,
+            'price' => 100,
+            'image' => '/public/product_image/product1.jpgp',
+            'store_id' => 2,
+        ]);
+
+
+        Product::create([
+            'name' => 'fgbf ',
+            'description' => 'جميع المقاسات',
+            'amount' => 10,
+            'price' => 100,
+            'image' => '/public/product_image/product1.jpgp',
+            'store_id' => 3,
+        ]);
+
+
+
+        Features::create([
+            'text' => 'High Quality',
+            'product_id' => 1,
+        ]);
+
+        Features::create([
+            'text' => 'fast quality',
+            'product_id' => 1,
+        ]);
+
+        Features::create([
+            'text' => 'best quality',
+            'product_id' => 2,
+        ]);
+
+        Features::create([
+            'text' => 'good quality',
+            'product_id' => 2,
+        ]);
+
+
+        Features::create([
+            'text' => 'good quality',
+            'product_id' => 3,
         ]);
     }
 }

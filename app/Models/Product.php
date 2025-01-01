@@ -22,6 +22,16 @@ class Product extends Model
         return $this->belongsToMany(User::class, 'carts');
     }
 
+    public function wishlist()
+    {
+        return $this->hasMany(Wishlist::class);
+    }
+
+    public function features()
+    {
+        return $this->hasMany(Features::class);
+    }
+
     public function setImageAttribute($image)
     {
         if ($image instanceof \Illuminate\Http\UploadedFile) {
